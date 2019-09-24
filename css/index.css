@@ -178,6 +178,7 @@ nav {
   min-height: 6vh;
   background-color: white;
   padding-top: 2%;
+  border-radius: 5px;
 }
 .navigation {
   display: flex;
@@ -200,6 +201,8 @@ nav {
 }
 footer {
   width: 100%;
+  background-color: #e7891b;
+  border-radius: 5px;
 }
 footer p {
   text-align: center;
@@ -213,13 +216,6 @@ footer p {
     align-items: center;
     justify-content: center;
   }
-}
-.top-content {
-  display: flex;
-}
-.top-content img {
-  width: 65%;
-  margin: 2%;
 }
 .main-btnbox {
   width: 100%;
@@ -242,11 +238,27 @@ footer p {
 .main-btnbox .btn {
   font-size: 2rem;
 }
+.top-content {
+  display: flex;
+}
+.top-content img {
+  width: 65%;
+  margin: 2%;
+  border-radius: 10px;
+}
 .mid-content {
   display: flex;
 }
 .card {
   margin: 23px;
   box-sizing: border-box;
+  border-radius: 10px;
+}
+.card p {
+  text-align: justify;
+}
+.card img {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
