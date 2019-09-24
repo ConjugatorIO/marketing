@@ -140,9 +140,6 @@ html,
 body {
   font-family: "Be Vietnam", sans-serif;
 }
-body {
-  background-color: #1b79e7;
-}
 h1,
 h2,
 h3,
@@ -152,6 +149,7 @@ h5 {
 }
 h1 {
   font-size: 4rem;
+  text-align: center;
 }
 h2 {
   font-size: 3.2rem;
@@ -167,10 +165,10 @@ img {
   max-width: 100%;
   height: auto;
 }
-.container {
+/*.container {
   width: 1000px;
   margin: 0 auto;
-}
+}*/
 nav {
   display: flex;
   justify-content: space-around;
@@ -178,7 +176,9 @@ nav {
   min-height: 6vh;
   background-color: white;
   padding-top: 2%;
-  border-radius: 5px;
+}
+nav img {
+  margin-left: 2%;
 }
 .navigation {
   display: flex;
@@ -186,13 +186,14 @@ nav {
   letter-spacing: 5px;
   font-size: 2rem;
   margin-top: 20px;
-  margin-right: 15%;
+  margin-right: 25%;
 }
 .nav-links {
   display: flex;
   justify-content: space-evenly;
   width: 40%;
   margin-top: 35px;
+  margin-right: 4%;
 }
 .nav-links a {
   text-decoration: none;
@@ -201,13 +202,13 @@ nav {
 }
 footer {
   width: 100%;
-  background-color: #e7891b;
-  border-radius: 5px;
+  background-color: #1b79e7;
 }
 footer p {
   text-align: center;
   font-size: 1.5rem;
   padding: 15px;
+  color: #f3c58e;
 }
 @media "(max-width:500px)" {
   footer p {
@@ -219,15 +220,17 @@ footer p {
 }
 .main-btnbox {
   width: 100%;
+  align-items: flex-end;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  margin: 4%;
+  margin-right: 2%;
+  margin-bottom: 6%;
 }
 .main-btnbox button {
   width: 100%;
-  margin: 5%;
-  height: 16%;
+  margin: 2%;
+  margin-top: 15%;
+  height: 51%;
   border-radius: 10px;
   background-color: #e7891b;
 }
@@ -242,12 +245,20 @@ footer p {
   display: flex;
 }
 .top-content img {
-  width: 65%;
+  width: 55%;
   margin: 2%;
   border-radius: 10px;
 }
+.top-content .main-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 6%;
+  margin-right: 8%;
+}
 .mid-content {
   display: flex;
+  background-color: #1b79e7;
 }
 .card {
   margin: 23px;
@@ -256,6 +267,10 @@ footer p {
 }
 .card p {
   text-align: justify;
+  color: #f3c58e;
+}
+.card h2 {
+  color: #f3c58e;
 }
 .card img {
   width: 100%;
