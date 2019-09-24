@@ -23,9 +23,11 @@
     height: 51%;
     border-radius: 10px;
     background-color: #e7891b;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     &:hover {
       background-color: @light-orange;
-      color: black;
+      color: @blue;
     }
   }
 
@@ -37,6 +39,10 @@
       font-size: 3rem;
       margin: 5%;
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 
@@ -85,18 +91,20 @@
   @media @mobile {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
-
-.card {
-  margin: 23px;
-  box-sizing: border-box;
+div .card {
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2%;
   border-radius: 10px;
 
   // ***********MOBILE VIEW FOR CARDS STARTS HERE---------->
   @media @mobile {
     p {
       font-size: 1.8rem;
+      text-align: center;
     }
 
     h2 {
@@ -109,11 +117,15 @@
   //*****MOBILE VIEW FOR CARDS ENDS HERE <-------------------
 
   p {
-    text-align: justify;
+    text-align: center;
     color: @light-orange;
+    size: 1.2 rem;
   }
   h2 {
     color: @light-orange;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    text-align: center;
   }
   img {
     width: 100%;
