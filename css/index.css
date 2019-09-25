@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-v2.0 | 20110126
-License: none (public domain)
+   v2.0 | 20110126
+   License: none (public domain)
 */
 html,
 body,
@@ -100,7 +100,8 @@ footer,
 header,
 hgroup,
 menu,
-nav {
+nav,
+section {
   display: block;
 }
 body {
@@ -118,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -165,10 +166,10 @@ img {
   max-width: 100%;
   height: auto;
 }
-/*.container {
-  width: 1000px;
+.container-about {
+  max-width: 1100px;
   margin: 0 auto;
-}*/
+}
 nav {
   display: flex;
   justify-content: space-around;
@@ -176,6 +177,13 @@ nav {
   min-height: 6vh;
   background-color: white;
   padding-top: 2%;
+}
+@media (max-width:500px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 nav img {
   margin-left: 2%;
@@ -188,12 +196,103 @@ nav img {
   margin-top: 20px;
   margin-right: 25%;
 }
+@media (max-width:500px) {
+  .navigation {
+    text-align: center;
+    margin: 0;
+  }
+}
+@media (max-width:800px) {
+  .navigation {
+    margin: 3%;
+  }
+  .navigation h2 {
+    font-size: 2.5rem;
+  }
+}
 .nav-links {
   display: flex;
   justify-content: space-evenly;
   width: 40%;
   margin-top: 35px;
   margin-right: 4%;
+}
+@media (max-width:500px) {
+  .nav-links {
+    display: flex;
+    align-content: center;
+    width: 100%;
+  }
+}
+@media (max-width:800px) {
+  .nav-links {
+    width: 100%;
+    margin: 4%;
+  }
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #635f5f;
+}
+.about-nav {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+  min-height: 6vh;
+  background-color: white;
+}
+@media (max-width:500px) {
+  .about-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.about-nav img {
+  margin-left: 2%;
+}
+.navigation {
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-right: 25%;
+}
+@media (max-width:500px) {
+  .navigation {
+    text-align: center;
+    margin: 0;
+  }
+}
+@media (max-width:800px) {
+  .navigation {
+    margin: 3%;
+  }
+  .navigation h2 {
+    font-size: 2.5rem;
+  }
+}
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  margin-top: 35px;
+  margin-right: 4%;
+}
+@media (max-width:500px) {
+  .nav-links {
+    display: flex;
+    align-content: center;
+    width: 100%;
+  }
+}
+@media (max-width:800px) {
+  .nav-links {
+    width: 100%;
+    margin: 4%;
+  }
 }
 .nav-links a {
   text-decoration: none;
@@ -210,13 +309,26 @@ footer p {
   padding: 15px;
   color: #f3c58e;
 }
-@media "(max-width:500px)" {
+@media (max-width:500px) {
   footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 2%;
   }
+  footer .icons {
+    display: flex;
+    width: 100%;
+  }
+}
+#bottom-section-about {
+  margin-top: 5%;
+}
+#bottom-section-about p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
 }
 .main-btnbox {
   width: 100%;
@@ -226,6 +338,16 @@ footer p {
   margin-right: 2%;
   margin-bottom: 6%;
 }
+@media (max-width:500px) {
+  .main-btnbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 16%;
+    margin-top: 8%;
+  }
+}
 .main-btnbox button {
   width: 100%;
   margin: 2%;
@@ -233,16 +355,43 @@ footer p {
   height: 51%;
   border-radius: 10px;
   background-color: #e7891b;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .main-btnbox button:hover {
   background-color: #f3c58e;
-  color: black;
+  color: #1b79e7;
 }
 .main-btnbox .btn {
   font-size: 2rem;
 }
+@media (max-width:500px) {
+  .main-btnbox .btn {
+    width: 80%;
+    font-size: 3rem;
+    margin: 5%;
+  }
+}
+.main-btnbox a {
+  text-decoration: none;
+}
 .top-content {
   display: flex;
+}
+@media (max-width:500px) {
+  .top-content h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 5%;
+    width: 100%;
+  }
+  .top-content img {
+    display: none;
+  }
+}
+@media (max-width:800px) {
+  .top-content h1 {
+    font-size: 2rem;
+  }
 }
 .top-content img {
   width: 55%;
@@ -259,21 +408,110 @@ footer p {
 .mid-content {
   display: flex;
   background-color: #1b79e7;
+  /*@media @tablet {
+    margin-top: 5%;
+    div.card {
+      width: 100%;
+      height: 50vh;
+    }
+  }*/
 }
-.card {
-  margin: 23px;
-  box-sizing: border-box;
+@media (max-width:500px) {
+  .mid-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+div .card {
+  width: 80%;
+  margin: 2%;
   border-radius: 10px;
 }
-.card p {
+@media (max-width:500px) {
+  div .card p {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  div .card h2 {
+    font-size: 3rem;
+    margin-bottom: 8%;
+    margin-top: 7%;
+  }
+}
+div .card p {
   text-align: justify;
   color: #f3c58e;
+  size: 1.2 rem;
 }
-.card h2 {
+div .card h2 {
   color: #f3c58e;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  text-align: center;
 }
-.card img {
+div .card img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+.about-title {
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  color: black;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+@media (max-width:800px) {
+  .row div .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2%;
+  }
+}
+@media (max-width:500px) {
+  .row {
+    display: flex;
+    align-content: center;
+  }
+}
+.row .card-body {
+  text-align: center;
+}
+.row .card-body h3 {
+  font-size: 2.5rem;
+}
+.row .card-body p {
+  font-size: 1.8rem;
+  text-align: center;
+  color: black;
+}
+.row .icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+.row li {
+  font-size: 1.8rem;
+  text-align: center;
+  color: black;
+}
+.card-title {
+  margin: 2%;
+}
+#team-img {
+  border-radius: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+#team-img:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
 }
