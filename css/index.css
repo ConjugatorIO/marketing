@@ -328,7 +328,7 @@ footer p {
 #bottom-section-about p {
   text-align: center;
   font-size: 1.5rem;
-  color: #e7891b;
+  color: black;
 }
 .main-btnbox {
   width: 100%;
@@ -459,7 +459,7 @@ div .card img {
   text-align: center;
   margin-top: 2%;
   margin-bottom: 5%;
-  color: #e7891b;
+  color: black;
 }
 .row {
   display: flex;
@@ -487,6 +487,16 @@ div .card img {
   font-size: 2.5rem;
 }
 .row .card-body p {
+  font-size: 1.8rem;
+  text-align: center;
+  color: black;
+}
+.row .icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+.row li {
   font-size: 1.8rem;
   text-align: center;
   color: black;
